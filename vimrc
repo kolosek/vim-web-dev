@@ -154,8 +154,15 @@ set expandtab
 	" Clear search highlighting
   nnoremap <silent><leader>c :nohlsearch<CR>
 
+  " Notifications for noobies
+  nnoremap <Left> :echoe "Use h"<CR>
+  nnoremap <Right> :echoe "Use l"<CR>
+  nnoremap <Up> :echoe "Use k"<CR>
+  nnoremap <Down> :echoe "Use j"<CR>
+
   " Start BufExplorer
   nnoremap <silent><leader>l :BufExplorer<CR>
+  nnoremap <silent><leader>e :Explore<CR>
   nnoremap <silent><leader>s :A<CR>
   nnoremap <silent><leader>v :AV<CR>
   nnoremap <silent><leader>\ :vs<CR>
@@ -173,11 +180,15 @@ set expandtab
   command Q q
   command Wq wq
 
-  " Elixir specific
-  nnoremap <leader>t :!mix test --trace<CR>
-  nnoremap <leader>f :!mix test --trace %<CR>
+  " Rspec specific
+  nnoremap <leader>t :call RunTest("")<CR>
+  nnoremap <leader>f :call RunTestFile("")<CR>
+  nnoremap <Leader>l :call RunLastSpec()<CR>
+  nnoremap <Leader>a :call RunAllSpecs()<CR>
 
-
+  " Use the arrows to something usefull
+  nnoremap <right> :bn<cr>
+  nnoremap <left> :bp<cr>
 
   " Paste
   let paste_mode = 0 " 0 = normal, 1 = paste
