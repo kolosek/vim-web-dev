@@ -14,7 +14,11 @@ Setting up snippets:
 cd ~/.vim/bundle/snipmate-snippets && rake deploy_local
 ```
 
-
+##Rspec commands
+SPACE + t - Run test
+SPACE + F - Run test file
+SPACE + s - Swich between file and test
+SPACE + e - Explore 
 
 #Vim cheat sheet
 
